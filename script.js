@@ -59,3 +59,20 @@ function removeEvent(index) {
         displayEvents();
     }
 }
+// Open popup
+function openForm() {
+  document.getElementById("registrationForm").style.display = "block";
+}
+
+// Close popup
+function closeForm() {
+  document.getElementById("registrationForm").style.display = "none";
+}
+
+// Form submit
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("successMessage").innerText =
+    "🎉 Registration Successful!";
+  this.reset();
+});

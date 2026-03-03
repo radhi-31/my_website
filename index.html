@@ -21,16 +21,20 @@
   </header>
 
   <section class="hero">
+
     <h2><i class="fa-solid fa-calendar"></i> March 20, 2026</h2>
     <p><i class="fa-solid fa-location-dot"></i> Mysuru, Karnataka</p>
     <div id="countdown"></div>
-    <button>Register Now</button>
+    <button onclick="openForm()">Register Now</button>
+    
   </section>
-
+  
   <section class="about">
     <h2>About the Event</h2>
     <p>CodeFest brings innovators together to build real-world solutions in 24 hours.</p>
   </section>
+  
+
   <section class="details">
     <h2>Event Details</h2>
     <ul>
@@ -39,7 +43,8 @@
     </ul>
   </section>
 
-  <section class="schedule">a
+
+  <section class="schedule">
     <h2>Event Schedule</h2>
     <ul>
       <li>09:00 AM — Opening Ceremony</li>
@@ -122,9 +127,11 @@
   </section>
 
   <footer>
-    <p>Contact: codefest@gmail.com</p>
-    <p>Shashi Kumar:9353967568</p>
-    <p>Veena Harish:9481765087</p>
+    <div class="footer-main">
+      <p>Contact: codefest@gmail.com</p>
+      <p>Shashi Kumar:9353967568</p>
+      <p>Veena Harish:9481765087</p>
+    </div>
   </footer>
 
   <script>
@@ -144,6 +151,32 @@
     }, 1000);
 
   </script>
+  <!-- Registration Popup -->
+<div id="registrationForm" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <h2>Hackathon Registration</h2>
+
+    <form id="registerForm">
+      <input type="text" id="fullname" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="college" placeholder="College Name" required>
+      <input type="text" id="team" placeholder="Team Name (Optional)">
+
+      <select id="track" required>
+        <option value="">Select Track</option>
+        <option>Smart City Solutions</option>
+        <option>Healthcare Innovation</option>
+        <option>FinTech Applications</option>
+      </select>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+
+    <p id="successMessage" style="color:green;"></p>
+  </div>
+</div>
   <script src="script.js"></script>
 </body>
 
